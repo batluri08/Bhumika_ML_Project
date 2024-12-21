@@ -1,0 +1,32 @@
+title: Code Detection - ML Model
+author: Bhumika Atluri
+logo: images/logo.png
+baseurl: /ML_Project_Bhumika
+
+execute:
+  execute_notebooks: force
+
+latex_documents:
+  targetname: book.tex
+
+# Book configuration
+jupyter_book:
+  logo: images/logo.png
+  navbar:
+    - file: CODE_DEFECT_DETECTION_MLPROJECT
+      title: "Python Jupyter Notebook"
+    - file: Markdown
+      title: "Links related to the project"
+    - file: Resume
+      title: "Resume"
+
+repository:
+  url: https://github.com/batluri08/ML_Project_Bhumika
+  path_to_book: docs
+  branch: main
+
+# Add GitHub buttons to your book
+html:
+  use_issues_button: true
+  use_repository_button: true
+  navbar_fixed: true
