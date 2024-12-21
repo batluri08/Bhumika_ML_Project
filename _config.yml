@@ -14,7 +14,7 @@ jupyter_book:
   logo: images/logo.png
   navbar:
     - file: CODE_DEFECT_DETECTION_MLPROJECT
-      title: "About The Project"
+      title: "Python Jupyter Notebbok"
     - file: Markdown
       title: "Links related to the project"
     - file: Resume
