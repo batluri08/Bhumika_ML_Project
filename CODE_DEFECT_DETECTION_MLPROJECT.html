@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -363,29 +363,6 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-jupyter-notebook">
 <h1>Python Jupyter Notebook<a class="headerlink" href="#python-jupyter-notebook" title="Link to this heading">#</a></h1>
-<p>The objective of this machine learning model is to solve a classification problem.</p>
-<p>This machine learning project focuses on predicting software defects using a dataset of software complexity metrics. The dataset contains 22 features, including measures such as cyclomatic complexity, lines of code, Halstead metrics, and branch counts, which quantify the structural and logical attributes of code. The target variable, defects, indicates whether a code segment contains a defect (True,1) or not (False,0). The goal of this project is to build a predictive model to classify code as defective or non-defective based on these metrics.  The dataset I have picked for this purpose is from open ml.</p>
-<p>These are the following steps I have performed :</p>
-<ol class="arabic simple">
-<li><p>Loading the dataset into a database , normalizing it into 3NF form and fetching the data into a dataframe.</p></li>
-<li><p>Exploring the data , split it into train and test data after stratifying</p></li>
-<li><p>Used correlation matric and other metrics to analayze and explore the data</p></li>
-<li><p>Cleaned the data by removing low varience features , removing highly correlated features , handled outliers in train and test data ,   normalized Nuemric features</p></li>
-<li><p>Initialized MLflow to track repo my “atluribhumika08/Code_Defect_Detection_Project”</p></li>
-<li><p>Created a pipeline for preprocessing (StandardScaler, MinMaxScaler, LogTransformation, OneHotEncoding) and Logistic Regression. Logged the F1-score;TP,TN,FN,FP; and results in Mlflow on Dagshub.</p></li>
-<li><p>Created a pipeline for preprocessing and used LogisticRegression, RidgeClassifier, RandomForestClassifier, and XGBClassifier.Logged the F1-score;TP,TN,FN,FP; and results in Mlflow on Dagshub.</p></li>
-<li><p>Performed feature engineering and attribute combination on LogisticRegression, RidgeClassifier, RandomForestClassifier, and XGBClassifier.Logged the F1-score;TP,TN,FN,FP; and results in Mlflow on Dagshub.</p></li>
-<li><p>Performed feature selection using Correlation Threshold, Feature Importance, and Variance Threshold on LogisticRegression, RidgeClassifier, RandomForestClassifier, and XGBClassifier.Logged the F1-score;TP,TN,FN,FP; and results in Mlflow on Dagshub.</p></li>
-<li><p>Used PCA for dimensionality reduction on all the features. Created a scree plot to show which components will be selected for classification. Applied this on LogisticRegression, RandomForestClassifier, and XGBClassifier. Logged results in MLFlow on Dagshub.</p></li>
-<li><p>Performed KNN on PCA reduced features.Logged results in MLFlow on Dagshub.</p></li>
-<li><p>Performed SVM .Logged results in MLFlow on Dagshub.</p></li>
-<li><p>Compared the F1 scores of models across all experiments</p></li>
-<li><p>Saved the final model using joblib as final_model.joblib.</p></li>
-<li><p>Creatde a FastAPI application to serve the model.</p></li>
-<li><p>Containerize the FastAPI application using Docker and pushed it to Docker Hub.</p></li>
-<li><p>Deployed the containerized API to render.</p></li>
-<li><p>Created a Streamlit app to interact with the deployed model for real-time classification.</p></li>
-</ol>
 <p>IMPORTING THE REQIURED LIBRARIES</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -476,7 +453,7 @@ First 5 rows from CSV:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x1d8fbeae810&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x191c5a5e810&gt;
 </pre></div>
 </div>
 </div>
@@ -517,7 +494,7 @@ First 5 rows from CSV:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x1d8fbeae810&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x191c5a5e810&gt;
 </pre></div>
 </div>
 </div>
@@ -886,7 +863,7 @@ defects             0.386714  0.348785    0.362549     0.297827  1.000000
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Removed highly correlated features: {&#39;n&#39;, &#39;e&#39;, &#39;uniq_Op&#39;, &#39;d&#39;, &#39;total_Op&#39;, &#39;v(g)&#39;, &#39;v&#39;, &#39;iv(g)&#39;, &#39;t&#39;, &#39;uniq_Opnd&#39;, &#39;total_Opnd&#39;, &#39;b&#39;, &#39;lOCode&#39;, &#39;branchCount&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Removed highly correlated features: {&#39;n&#39;, &#39;branchCount&#39;, &#39;e&#39;, &#39;total_Op&#39;, &#39;total_Opnd&#39;, &#39;t&#39;, &#39;lOCode&#39;, &#39;v(g)&#39;, &#39;iv(g)&#39;, &#39;v&#39;, &#39;uniq_Opnd&#39;, &#39;b&#39;, &#39;d&#39;, &#39;uniq_Op&#39;}
 </pre></div>
 </div>
 </div>
