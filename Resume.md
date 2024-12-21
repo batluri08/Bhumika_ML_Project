@@ -1,4 +1,3 @@
-## Resume
 
 ## ATLURI BHUMIKA
 
