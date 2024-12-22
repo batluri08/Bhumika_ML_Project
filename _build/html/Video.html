@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Code Defect Detection &#8212; Code Defect Detection</title>
+    <title>Video &#8212; Code Defect Detection</title>
   
   
   
@@ -60,10 +60,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Video';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Python Jupyter Notebook" href="CODE_DEFECT_DETECTION_MLPROJECT.html" />
+    <link rel="prev" title="Resume" href="Resume.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -115,8 +115,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -136,7 +134,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -157,18 +155,18 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Code Defect Detection
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="CODE_DEFECT_DETECTION_MLPROJECT.html">Python Jupyter Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Links related to the project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resume.html">Resume</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="Video.html">Video</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Video</a></li>
 </ul>
 
     </div>
@@ -245,7 +243,7 @@
       
       
       
-      <li><a href="https://github.com/batluri08/ML_Project_Bhumika/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/batluri08/ML_Project_Bhumika/issues/new?title=Issue%20on%20page%20%2FVideo.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +273,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Video.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -351,7 +349,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Code Defect Detection</h1>
+    <h1>Video</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -361,7 +359,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#end-to-end-machine-learning-project">END TO END MACHINE LEARNING PROJECT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#googledrive-link-https-drive-google-com-uc-id-1d4zuld28xsqzjksx4hduromqfadcewj7-export-download">GoogleDrive Link: https://drive.google.com/uc?id=1D4zULd28xSqZJKSx4hDuromqfAdCEWj7&amp;export=download</a></li>
 </ul>
             </nav>
         </div>
@@ -373,36 +371,11 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="code-defect-detection">
-<h1>Code Defect Detection<a class="headerlink" href="#code-defect-detection" title="Link to this heading">#</a></h1>
-<section id="end-to-end-machine-learning-project">
-<h2>END TO END MACHINE LEARNING PROJECT<a class="headerlink" href="#end-to-end-machine-learning-project" title="Link to this heading">#</a></h2>
-<p>The objective of this machine learning model is to solve a classification problem.</p>
-<p>This machine learning project focuses on predicting software defects using a dataset of software complexity metrics. The dataset contains 22 features, including measures such as cyclomatic complexity, lines of code, Halstead metrics, and branch counts, which quantify the structural and logical attributes of code. The target variable, defects, indicates whether a code segment contains a defect (True,1) or not (False,0). The goal of this project is to build a predictive model to classify code as defective or non-defective based on these metrics.  The dataset I have picked for this purpose is from open ml.</p>
-<p>These are the following steps I have performed :</p>
-<ol class="arabic simple">
-<li><p>Loading the dataset into a database , normalizing it into 3NF form and fetching the data into a dataframe.</p></li>
-<li><p>Exploring the data , split it into train and test data after stratifying</p></li>
-<li><p>Used correlation matric and other metrics to analayze and explore the data</p></li>
-<li><p>Cleaned the data by removing low varience features , removing highly correlated features , handled outliers in train and test data ,   normalized Nuemric features</p></li>
-<li><p>Initialized MLflow to track repo my “atluribhumika08/Code_Defect_Detection_Project”</p></li>
-<li><p>Created a pipeline for preprocessing (StandardScaler, MinMaxScaler, LogTransformation, OneHotEncoding) and Logistic Regression. Logged the F1-score;TP,TN,FN,FP; and results in Mlflow on Dagshub.</p></li>
-<li><p>Created a pipeline for preprocessing and used LogisticRegression, RidgeClassifier, RandomForestClassifier, and XGBClassifier.Logged the F1-score;TP,TN,FN,FP; and results in Mlflow on Dagshub.</p></li>
-<li><p>Performed feature engineering and attribute combination on LogisticRegression, RidgeClassifier, RandomForestClassifier, and XGBClassifier.Logged the F1-score;TP,TN,FN,FP; and results in Mlflow on Dagshub.</p></li>
-<li><p>Performed feature selection using Correlation Threshold, Feature Importance, and Variance Threshold on LogisticRegression, RidgeClassifier, RandomForestClassifier, and XGBClassifier.Logged the F1-score;TP,TN,FN,FP; and results in Mlflow on Dagshub.</p></li>
-<li><p>Used PCA for dimensionality reduction on all the features. Created a scree plot to show which components will be selected for classification. Applied this on LogisticRegression, RandomForestClassifier, and XGBClassifier. Logged results in MLFlow on Dagshub.</p></li>
-<li><p>Performed KNN on PCA reduced features.Logged results in MLFlow on Dagshub.</p></li>
-<li><p>Performed SVM .Logged results in MLFlow on Dagshub.</p></li>
-<li><p>Compared the F1 scores of models across all experiments</p></li>
-<li><p>Saved the final model using joblib as final_model.joblib.</p></li>
-<li><p>Creatde a FastAPI application to serve the model.</p></li>
-<li><p>Containerize the FastAPI application using Docker and pushed it to Docker Hub.</p></li>
-<li><p>Deployed the containerized API to render.</p></li>
-<li><p>Created a Streamlit app to interact with the deployed model for real-time classification.</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="video">
+<h1>Video<a class="headerlink" href="#video" title="Link to this heading">#</a></h1>
+<section id="googledrive-link-https-drive-google-com-uc-id-1d4zuld28xsqzjksx4hduromqfadcewj7-export-download">
+<h2>GoogleDrive Link: <a class="reference external" href="https://drive.google.com/uc?id=1D4zULd28xSqZJKSx4hDuromqfAdCEWj7&amp;amp;export=download">https://drive.google.com/uc?id=1D4zULd28xSqZJKSx4hDuromqfAdCEWj7&amp;export=download</a><a class="headerlink" href="#googledrive-link-https-drive-google-com-uc-id-1d4zuld28xsqzjksx4hduromqfadcewj7-export-download" title="Link to this heading">#</a></h2>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -435,14 +408,14 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="CODE_DEFECT_DETECTION_MLPROJECT.html"
-       title="next page">
+    <a class="left-prev"
+       href="Resume.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python Jupyter Notebook</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Resume</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -461,7 +434,7 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#end-to-end-machine-learning-project">END TO END MACHINE LEARNING PROJECT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#googledrive-link-https-drive-google-com-uc-id-1d4zuld28xsqzjksx4hduromqfadcewj7-export-download">GoogleDrive Link: https://drive.google.com/uc?id=1D4zULd28xSqZJKSx4hDuromqfAdCEWj7&amp;export=download</a></li>
 </ul>
   </nav></div>
 

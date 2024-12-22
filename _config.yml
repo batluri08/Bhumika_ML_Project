@@ -19,6 +19,8 @@ jupyter_book:
       title: "Links related to the project"
     - file: Resume
       title: "Resume"
+    - file: Video
+      title: "Video"
 
 repository:
   url: https://github.com/batluri08/ML_Project_Bhumika
