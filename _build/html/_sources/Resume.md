@@ -25,7 +25,7 @@
 - **Databases:** Oracle, Snowflake, MySQL, PostgreSQL, MS SQL  
 - **Data Science Tools:** Tableau, MS Power BI, MS Excel, Git, Snowflake  
 - **Full Stack Development:** React, JavaScript, CSS, HTML  
-- **Cloud Technologies:** Azure  
+- **Cloud Technologies:** Azure , AWS
 - **Interpersonal Skills:** Communication and Data Presentation, Documentation, Problem-Solving, Adaptability, Teamwork  
 
 ---
