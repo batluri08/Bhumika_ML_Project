@@ -363,7 +363,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-jupyter-notebook">
 <h1>Python Jupyter Notebook<a class="headerlink" href="#python-jupyter-notebook" title="Link to this heading">#</a></h1>
-<p>IMPORTING THE REQIURED LIBRARIES</p>
+<p>IMPORTING THE REQUIRED LIBRARIES</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -453,7 +453,7 @@ First 5 rows from CSV:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x191c5a5e810&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x253deacd8f0&gt;
 </pre></div>
 </div>
 </div>
@@ -494,7 +494,7 @@ First 5 rows from CSV:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x191c5a5e810&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x253deacd8f0&gt;
 </pre></div>
 </div>
 </div>
@@ -827,6 +827,14 @@ defects             0.386714  0.348785    0.362549     0.297827  1.000000
 <img alt="_images/357690068db2b70d8f596b84741cfde8b563105c8bf0df13ba89a92fd79b0488.png" src="_images/357690068db2b70d8f596b84741cfde8b563105c8bf0df13ba89a92fd79b0488.png" />
 </div>
 </div>
+<p>Observations after exploring the dataset:</p>
+<p>Class Imbalance: The target variable (defective vs. non-defective code) shows a higher proportion of non-defective samples, requiring stratified splitting or techniques like SMOTE for balancing.</p>
+<p>Highly Correlated Features: Features like loc (lines of code), total_Op (total operations), and n (number of operands) have very high correlations (e.g., loc and total_Op with a correlation &gt; 0.94). These redundancies indicate that one of these features can be removed without losing significant information.
+Presence of Outliers: Features such as v (volume) and branchCount contain extreme outliers that may distort model learning, necessitating outlier handling techniques like z-score filtering.</p>
+<p>Branch Count Correlation: branchCount is strongly correlated with v(g) (cyclomatic complexity) and iv(g) (internal complexity), with correlations above 0.9, suggesting that these features may overlap in the information they provide about code complexity.</p>
+<p>Target Variable (defects) Correlation: defects has weak-to-moderate positive correlations with features like branchCount (0.29), total_Op (0.36), and uniq_Opnd (0.35). These features might play a role in predicting defects but are not strongly defining.
+Skewed Distributions: Features like v (volume) and e (effort) exhibit right-skewed distributions, suggesting log transformation to normalize these features.</p>
+<p>Low-Variance Features: Attributes with near-zero variance, such as certain categorical encodings, contribute little to prediction and can be removed to improve model efficiency.</p>
 <p>DATA CLEANING</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -863,7 +871,7 @@ defects             0.386714  0.348785    0.362549     0.297827  1.000000
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Removed highly correlated features: {&#39;n&#39;, &#39;branchCount&#39;, &#39;e&#39;, &#39;total_Op&#39;, &#39;total_Opnd&#39;, &#39;t&#39;, &#39;lOCode&#39;, &#39;v(g)&#39;, &#39;iv(g)&#39;, &#39;v&#39;, &#39;uniq_Opnd&#39;, &#39;b&#39;, &#39;d&#39;, &#39;uniq_Op&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Removed highly correlated features: {&#39;total_Opnd&#39;, &#39;n&#39;, &#39;v&#39;, &#39;t&#39;, &#39;uniq_Opnd&#39;, &#39;total_Op&#39;, &#39;iv(g)&#39;, &#39;lOCode&#39;, &#39;uniq_Op&#39;, &#39;e&#39;, &#39;d&#39;, &#39;branchCount&#39;, &#39;v(g)&#39;, &#39;b&#39;}
 </pre></div>
 </div>
 </div>
