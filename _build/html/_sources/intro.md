@@ -1,4 +1,4 @@
-# About The Project
+# Code Defect Detection
 
 ## END TO END MACHINE LEARNING PROJECT 
 
